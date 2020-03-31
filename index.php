@@ -20,11 +20,15 @@
 	
 	  require'util/const.php';
 	  require'dao/DB.php';
+	  require'dao/CustomerDAO.php';
+	  require'dao/CustomerDAOImpl.php';
 	  require'controller/Controller.php';
 	  require'controller/GeneratorController.php';
+	  require'controller/CustomerController.php';
 	  require 'model/FileGenerator.php';
+	  require 'model/Customer.php';
 		
-		
+	  /*
 	  $controller = new Controller();
 	  foreach ($controller->getAll() as $c) {
 		echo "<li>" . $c['firstname'] . "</li>";
@@ -32,6 +36,16 @@
 	  
 	  $generatorController=new GeneratorController();
 	  $generatorController->generateBase('delivery','model/');
+	  */
+	  
+	  $post = array("firstname"=>"firstname", "lastname"=>"lastname", "phone"=>"phone",
+	                 "email"=>"email", "street"=>"street", "city"=>"city");
+	  $customer=new Customer($post);
+	  $customerController=new CustomerController();
+	  print_r($customer);
+	  $customerController->addCustomer($customer);
+	  
+	  
 	?>
   
 </body>

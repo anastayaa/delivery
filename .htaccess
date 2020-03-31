@@ -1,4 +1,0 @@
-Redirect /delivery/controller/ http://localhost:8090/delivery/index.php
-Redirect /delivery/model/ http://localhost:8090/delivery/index.php
-Redirect /delivery/public/ http://localhost:8090/delivery/index.php
-Redirect /delivery/dao/ http://localhost:8090/delivery/index.php
